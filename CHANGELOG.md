@@ -1,6 +1,8 @@
 # Changelog
 ## [Unreleased 5.4.2]
 ## Improvements
+- ANALYTIC MOVE LINE : made some field mandatory and added tracking
+
 ## Bug Fixes
 - ACCOUNTING BATCH : corrected conflict between boolean isTaxRequiredOnMoveLine and closure/opening accounting batch. 
 
@@ -106,6 +108,32 @@
 - Bank reconciliation: add management of case of several account management for account domain, journal domain, auto change of journal and cash account fields and now account and journal from bank details are prioritized.
 - Invoice: Fix NullPointerException when the product is not filled in invoice line.
 
-[Unreleased 5.4.2]: https://github.com/axelor/axelor-open-suite/compare/v5.4.1...5.4-dev
-[5.4.1]: https://github.com/axelor/axelor-open-suite/compare/v5.4.0...v5.4.1
-[5.4.0]: https://github.com/axelor/axelor-open-suite/compare/v5.3.12...v5.4.0
+* PRINT TEMPLATE: Add header and footer settings in print template.
+* Print Template: use locale based on selected language in Template.
+* PRINT TEMPLATE LINE: add new field 'ignore the line'.
+* Production: machine work center is now a machine instead of a work center.
+* MPS/MRP: title before sequence to change depending on the type.
+* Use relative path instead of absolute path in configuration file path fields.
+* Production: Remove stock location in machine type.
+* Project DMS: Move 'Project DMS' menu inside projects main menu.
+* MANUF ORDER: Print residual products on report and add panel of residual products.
+* PURCHASE ORDER LINE: Replace the min sale price field by a field that indicates the maximum purchase price recommended.
+* USER: the admin can now force the user to change password on the next connection.
+* Invoice: Add tracking for most fields.
+* ANALYTIC MOVE LINE : hide fields when open from a invoiceLine.
+* ANALYTIC MOVE LINE : hide fields when open from a saleOrder or a purchaseOrder
+
+#### Fixed
+
+* Production configuration: fix stock location filter in workshop sequence config line and make the grid editable.
+* Quality Alert: Show title of fields description, corrective actions and preventive actions.
+* Email message template: remove from address in template.
+
+Setting a custom `from` address per email template is now disabled, as the from
+address should depend only on the SMTP account. The `from` should now always
+be set in SMTP account configuration.
+
+* LeaveReason: rename `leaveReason` field into `name`.
+* JobPosition: Remove character limit on Profile Wanted field.
+
+[6.0.0]: https://github.com/axelor/axelor-open-suite/compare/v5.4.1...v6.0.0
